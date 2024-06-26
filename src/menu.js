@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 
-const mainMenu = async (options) => {
+const mainMenu = async (options, returnMenu) => {
   const { menuOption } = await inquirer.prompt([
     {
       type: 'list',
@@ -14,6 +14,9 @@ const mainMenu = async (options) => {
 
   if (selectedOption && selectedOption.value) {
     await selectedOption.value();
+    if (returnMenu) {
+      await returnMenu();
+    }
   } else {
     console.log('Goodbye!');
     return;

@@ -1,5 +1,5 @@
 const addition = require('./src/actions/addition');
-const minus = require('./src/actions/minus');
+const english = require('./src/actions/english');
 const mainMenu = require('./src/menu');
 
 (async () => {
@@ -10,8 +10,8 @@ const mainMenu = require('./src/menu');
       value: addition
     },
     {
-      name: 'Minus',
-      value: minus
+      name: 'English',
+      value: english
     },
     {
       name: 'Exit',

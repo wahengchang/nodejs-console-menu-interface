@@ -1,5 +1,4 @@
 const inquirer = require('inquirer');
-const backToMainMenu = require('../backToMainMenu');
 
 const addition = async () => {
   const { firstNumber } = await inquirer.prompt([
@@ -20,8 +19,7 @@ const addition = async () => {
 
   const result = parseFloat(firstNumber) + parseFloat(secondNumber);
   console.log(`The result is ${result}`);
-
-  await backToMainMenu();
+  return
 };
 
 module.exports = addition;
